@@ -1,0 +1,46 @@
+## Programming Assignment: 2 - Proyecto Asignado: 2
+## Init the inverse prpierty of the Matrix - Inicio de la propiedad inversa de la matriz
+i <- NULL
+## Initialize the inverse function - Se inicia la funcion inversa
+MatMatSet<- function( matrix ) {
+            m <<- matrix
+            i <<- NULL
+    }
+## Extract and get the matrix - Se extrae los datos de la matriz
+    get <- function() {
+    	m
+    }
+## Setting the inverse propierty - Establecer la propiedad inversa
+    setInverse <- function(inverse) {
+        i <<- inverse
+    }
+## Extract the inverse property of the Matrix- Extraccion de la propiedad inversa de la matriz
+    getInverse <- function() {
+        i
+    }
+    list(MatSet= set, get = get,
+         setInverse = setInverse,
+         getInverse = getInverse)
+}
+
+## Calculate the inverse of the matrix returned
+## Calculo del inverso de la matriz especial
+
+## Constructing the function to retrieve the inverse 
+## Construyendo la funcion para obter el inverso
+
+## Return a matrix that is the inverse of "x"
+## Devolviendo la matriz que es inversa de "x"
+cacheSolve <- function(x, ...) {
+    m <- x$getInverse()
+    if( !is.null(m) ) {
+            message("Obteniendo datos en cache")
+            return(m)
+    }
+## Get the inverse of the varaible - Obteniendo la inversa del objeto
+    data <- x$get()
+    m <- solve(data)
+    x$setInverse(m)
+## Obtaining the object - Obteniendo el objeto
+    m
+}
